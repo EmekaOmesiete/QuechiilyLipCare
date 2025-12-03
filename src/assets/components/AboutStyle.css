@@ -1,0 +1,145 @@
+.about-container {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d6336c;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-section strong {
+  color: #000;
+}
+
+.features-list {
+  list-style: none;     
+  padding-left: 0;
+  margin: 0;
+}
+
+.features-list li {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.features-list li strong {
+  color: #000000;        
+  margin-right: 5px;
+}
+
+.about-cta {
+  text-align: center;
+  background: #fafafa;
+  padding: 60px 20px;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-cta p {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.about-cta button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.about-cta button:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 40px 15px;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px),
+       (max-width: 430px) {
+
+  .about-content {
+    padding: 30px 15px;
+    max-width: 95%;
+    margin: auto;
+  }
+
+  .about-section {
+    margin-bottom: 35px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;   
+    margin-bottom: 12px;
+  }
+
+  .about-section p {
+    font-size: 1rem;    
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .features-list li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .about-cta {
+    padding: 40px 15px;
+  }
+
+  .about-cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .about-cta p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .about-cta button {
+    width: 90%;         
+    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;      
+  }
+}

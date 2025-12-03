@@ -1,0 +1,159 @@
+.products-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.products-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #d6336c;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  border: 2px solid #f06292;
+  border-radius: 30px;
+  background: white;
+  color: #f06292;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #f06292;
+  color: #fff;
+}
+
+.selected-product img.main-product-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.selected-product h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color-btn:hover {
+  border-color: #000;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  border-color: #f06292;
+}
+
+.thumbnail.active {
+  border-color: #f062a4;
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 30px 15px;
+  }
+
+  .products-title {
+    font-size: 2rem;
+  }
+
+  .category-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .selected-product img.main-product-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .color-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 430px) {
+  .products-title {
+    font-size: 1.8rem;
+  }
+
+  .category-buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .category-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .selected-product img.main-product-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .thumbnail {
+    width: 35px;
+    height: 35px;
+  }
+
+  .color-btn {
+    width: 30px;
+    height: 30px;
+  }
+}

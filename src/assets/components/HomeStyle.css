@@ -1,0 +1,80 @@
+.home {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333;
+}
+
+.home__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #d6336c; 
+}
+
+.home__description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.home__btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #d6336c;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home__btn:hover {
+  background: #b82a59;
+  transform: scale(1.05);
+}
+
+.home__btn.active {
+  background: #000;
+}
+
+@media (max-width: 480px),
+       (max-width: 430px) {
+
+  .home {
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    /* margin-top: 3rem; */
+  }
+
+  .home__title {
+    font-size: 2rem;        
+    margin-bottom: 1.2rem;
+  }
+
+  .home__description {
+    font-size: 1rem;      
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .home__btn {
+    display: block;         
+    width: 90%;
+    max-width: 300px;       
+    margin: 1.2rem auto 0;  
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    border-radius: 10px;    
+  }
+
+  .home__btn:hover {
+    transform: scale(1.05);
+  }
+}

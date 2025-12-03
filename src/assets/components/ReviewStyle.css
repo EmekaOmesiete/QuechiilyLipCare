@@ -1,0 +1,150 @@
+.reviews-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 15px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+
+  background-image: url("/images/IMG_8365.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reviews-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); 
+  z-index: 0;
+}
+
+.reviews-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d6336c;
+  margin-bottom: 25px;
+}
+
+.reviews-grid {
+  display: grid;
+  justify-content: center; 
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 20px;
+  max-width: 1000px;    
+  width: 100%;
+}
+
+.review-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-image-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.review-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.show-more-wrapper {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.show-more-btn {
+  padding: 12px 26px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #b7246f;
+  transform: translateY(-2px);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 760px) {
+  .reviews-title {
+    font-size: 1.8rem;
+  }
+  .reviews-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-container {
+    padding: 30px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .reviews-grid {
+    grid-template-columns: 1fr; 
+    max-width: 330px;         
+  }
+  .reviews-title {
+    font-size: 1.5rem;
+  }
+}
