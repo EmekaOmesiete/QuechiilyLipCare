@@ -13,7 +13,7 @@ const Header = () => {
       
          <NavLink to="/">
           <img
-            src="/images/quechilly.png"
+            src="/images/quechilly-rev.png"
             alt="quechilly image"
             className="logo-img"
           />

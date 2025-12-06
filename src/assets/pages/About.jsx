@@ -74,7 +74,7 @@ const About = () => {
         <p>
           Treat your lips to natural softness, protection, and refreshing chill.
         </p>
-        <button>Shop Now</button>
+        <button>Order Now</button>
       </section>
     </div>
   );

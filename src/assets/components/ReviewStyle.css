@@ -148,3 +148,40 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 320px) {
+
+  .reviews-container {
+    padding: 20px 10px;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  .reviews-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 260px;
+  }
+
+  .review-image-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  }
+
+  .show-more-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .lightbox-img {
+    width: 93%;
+    border-radius: 8px;
+  }
+}

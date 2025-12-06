@@ -7,6 +7,8 @@ const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(selectedCategory.products[0]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   const handleCategoryChange = (categoryId) => {
     const category = productCategories.find((c) => c.id === categoryId);
     setSelectedCategory(category);
@@ -21,6 +23,14 @@ const Products = () => {
 
   const handleImageClick = (index) => {
     setSelectedImageIndex(index);
+  };
+
+  const openLightbox = () => {
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
   };
 
   return (
@@ -44,7 +54,10 @@ const Products = () => {
           src={selectedProduct.images[selectedImageIndex]}
           alt={selectedProduct.name}
           className="main-product-img"
+          onClick={openLightbox}
+          style={{ cursor: "zoom-in" }}
         />
+
         <h2>{selectedProduct.name}</h2>
 
         <div className="color-options">
@@ -58,7 +71,7 @@ const Products = () => {
             ></button>
           ))}
         </div>
-        
+
         <div className="thumbnail-container">
           {selectedProduct.images.map((img, index) => (
             <img
@@ -71,7 +84,18 @@ const Products = () => {
           ))}
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <img
+            src={selectedProduct.images[selectedImageIndex]}
+            alt="Zoomed"
+            className="lightbox-img"
+          />
+        </div>
+      )}
     </div>
   );
-}
+};
+
 export default Products;
