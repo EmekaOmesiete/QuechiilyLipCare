@@ -97,7 +97,7 @@ const About = () => {
             <div className="order-icons">
               
               <a
-                href="https://instagram.com/your_instagram_username"
+                href="https://instagram.com/quechilly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="order-icon instagram"
