@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "../components/AboutStyle.css";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const About = () => {
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <div className="about-container">
       <section className="about-content">
@@ -74,8 +77,48 @@ const About = () => {
         <p>
           Treat your lips to natural softness, protection, and refreshing chill.
         </p>
-        <button>Order Now</button>
+         <button onClick={() => setShowPopup(true)}>Order Now</button>
       </section>
+            {showPopup && (
+        <div className="order-popup-overlay" onClick={() => setShowPopup(false)}>
+          <div
+            className="order-popup"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setShowPopup(false)}
+            >
+              ✕
+            </button>
+
+            <h3>Order via</h3>
+
+            <div className="order-icons">
+              
+              <a
+                href="https://instagram.com/your_instagram_username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="order-icon instagram"
+              >
+                <FaInstagram />
+                <span>Instagram</span>
+              </a>
+              
+              <a
+                href="https://wa.me/2348168183525?text=Hi%20👋🏽%20I’d%20like%20to%20place%20an%20order%20for%20QueChilly%20lip%20care%20products.%20Please%20share%20details.%20Thank%20you!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="order-icon whatsapp"
+              >
+                <FaWhatsapp />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
